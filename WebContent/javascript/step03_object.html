@@ -864,8 +864,34 @@
         let name = storeObj.name;
         console.log(name);
     }
+    const test = {
+    cafelist :[
+        {"name" : "성영한", "clubid" : "syh1011"},
+        {"name" : "홍길동", "clubid" : "lmp1011"},
+        {"name" : "김대중", "clubid" : "kdj1011"}
+        ]
+    } 
+    console.log(test.cafelist[1].name);//홍길동
+    console.log(test.cafelist[2].clubid);//kdj1011
+    
+    const cafelist = test.cafelist;//array
+    for(let i=0;i<cafelist.length;i++){
+        const cafelistobj = cafelist[i];//object
+        let name = cafelistobj.name;
+        let clubid = cafelistobj.clubid;
+        console.log(name +','+clubid);
+    }
 
-        
+    let str = '{"name":"aaa","age":12}';
+    //JSON.parse(문자열) : 문자열을 object로 변환
+    const member = JSON.parse(str);
+    console.log(member.name);
+
+    alert(member);
+    
+    //JSON.stringify(object) : object를 문자열로 변환
+    let memberStr = JSON.stringify(member);
+    alert(memberStr);
     </script>
 </head>
 <body>
